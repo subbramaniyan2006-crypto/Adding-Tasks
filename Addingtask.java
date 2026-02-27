@@ -1,9 +1,6 @@
 import java.text.SimpleDateFormat;
 import java.util.*;
-
 public class Addingtask {
-    
-    // --------------------------------------------------------------------
     public static void addTask(ArrayList<String> taskNames, ArrayList<Date> taskDeadlines, String taskName, String deadline) {
         Date deadlineDate = validateDate(deadline);
         if (deadlineDate != null) {
@@ -12,9 +9,6 @@ public class Addingtask {
             System.out.println("Task added successfully!\n");
         }
     }
-
-    // --------------------------------------------------------------------
-
     public static Date validateDate(String deadline) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
         dateFormat.setLenient(false);
@@ -64,7 +58,6 @@ public class Addingtask {
     }
 
     public static void main(String[] args) {
-        // Two ArrayLists to store tasks and deadlines separately
         ArrayList<String> taskNames = new ArrayList<>();
         ArrayList<Date> taskDeadlines = new ArrayList<>();
         
@@ -91,4 +84,5 @@ public class Addingtask {
 
         scanner.close();
     }
+
 }
